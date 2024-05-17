@@ -1,5 +1,7 @@
-#!/usr/bin/python3
+"""Aligned with Pycodestyle"""
+
 str1 = "Holberton"
 str2 = "School"
-str1 += (" " + str2)
-print("Welcome to {}!" .format(str1))
+
+# Concatenate strings with f-string for clarity
+print(f"Welcome to {str1}!")
