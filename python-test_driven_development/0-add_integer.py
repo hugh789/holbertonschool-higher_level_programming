@@ -13,10 +13,16 @@ def add_integer(a, b=98):
     Returns:
         The sum of a and b
     """
+# Validate that both 'a' and 'b' are either integers or floats
+    if not (isinstance(a, int) or isinstance(a, float)):
+        raise TypeError("a must be an integer")
+    elif not (isinstance(b, int) or isinstance(b, float)):
+        raise TypeError("b must be an integer")
+    a = int(a)
+    b = int(b)
+    #cast both arguments to integers before adding (handling floats)
+    return a + b
 
     # Check if both a and b are numbers (int or float)
-    if not (isinstance(a,(int, float)) or not isinstance(b, (int, float))
-    raise TypeError("a must be an integer or b must be an integer")
     
     # Ensure both are integers before adding (casting floats or int)
-    return int(a) + int(b)
