@@ -2,7 +2,7 @@
 """this module is about creating an abstract class named Shape using the ABC
 package."""
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
@@ -27,10 +27,10 @@ class Circle(Shape):
     self.radius = radius
 
   def area(self):
-    return 3.14159 * self.radius**2
+    return pi * self.radius**2
 
   def perimeter(self):
-    return 2 * 3.14159 * self.radius
+    return 2 * pi * self.radius
 
 class Rectangle(Shape):
   """
