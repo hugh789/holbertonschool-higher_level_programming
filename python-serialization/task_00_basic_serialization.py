@@ -25,15 +25,3 @@ def load_and_deserialize(filename):
   """
   with open(filename, 'r') as f:
     return json.load(f)
-
-
-# My data
-my_data = {"name": "John Doe", "age": 30, "city": "New York"}
-
-# Serialize and save to file (replace 'data.json' with your desired filename)
-serialize_and_save_to_file(my_data, 'data.json')
-
-# Load and deserialize
-deserialized_data = load_and_deserialize('data.json')
-
-print(deserialized_data)  # Output: {'name': 'John Doe', 'age': 30, 'city': 'New York'}

@@ -1,14 +1,22 @@
-import json
+#!/usr/bin/env python3
+from task_00_basic_serialization import load_and_deserialize, serialize_and_save_to_file
 
-# Load data from JSON file
-with open("data.json", "r") as f:
-    data = json.load(f)
+# Sample data to be serialized
+data_to_serialize = {
+    "name": "John Doe",
+    "age": 30,
+    "city": "New York"
+}
 
-# Print the loaded data
-print("Loaded data:", data)
+# Serialize the data to JSON and save it to a file
+serialize_and_save_to_file(data_to_serialize, 'data.json')
 
-# Access specific data elements (optional)
-name = data["name"]
-age = data["age"]
+# Output: The data has been serialized and saved to 'data.json'
+print("Data serialized and saved to 'data.json'.")
 
-print(f"Hello, {name}! You are {age} years old.")
+# Load and deserialize data from 'data.json'
+deserialized_data = load_and_deserialize('data.json')
+
+# Output: The deserialized data
+print("Deserialized Data:")
+print(deserialized_data)
