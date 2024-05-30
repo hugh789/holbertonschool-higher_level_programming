@@ -51,5 +51,6 @@ def add_user():
     return jsonify({"message": "User added", "user": users[username]})  # Confirmation message
 
 #Step 2: Run Flask developer server + enable debug (by deafult)
- if __name__ == "__main__":
-    app.run(debug=True)
+# Set debug=True for the server to auto-reload when there are changes
+if __name__ == "__main__":
+    app.run(host='localhost', port=5000, debug=True)
