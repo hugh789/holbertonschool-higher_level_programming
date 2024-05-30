@@ -6,7 +6,7 @@ task_04_flask:
     endpoints.
 """
 #Step 1: Setting Up Flask
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 
 app = Flask(__name__)
 # Example dictionary: username(key) whole object(value)
@@ -22,7 +22,7 @@ def home():
 @app.route("/data")
 def data():
     usernames = list(users.keys())  # List of all the usernames
-    return jsonify(usernames)
+    return jsonify(list(users.keys()))
 
 #Step 4: Expanding Your API
 
@@ -33,9 +33,13 @@ def status():
 @app.route("/users/<username>")
 def users_username(username):
     # Getting whole object(value) that corresponds with username(key)
-    whole_obj = users.get(username)
-    return jsonify(whole_obj)
+    if username not in users:
+        return jsonify({"error": "User not found"}), 404
 
+    output = users[username]
+    output["username"] = username
+
+    return jsonify(output)
 
 #Step 5: Handling Post Requests
 @app.route("/add_user", methods=['POST'])
