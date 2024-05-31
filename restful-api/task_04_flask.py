@@ -20,11 +20,10 @@ users = {}
 @app.route("/")
 def home():
     """ Prints welcome string """
-    return "Welcome to the Flask API!"
+    return "Hello, this is a simple API!"
 #Step 3: Serving JSON Data
 @app.route("/data")
 def data():
-    """ Returns JSON data """
     return jsonify(list(users.keys()))
 
 #Step 4: Expanding Your API
