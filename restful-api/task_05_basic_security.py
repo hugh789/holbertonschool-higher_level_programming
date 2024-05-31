@@ -4,7 +4,7 @@
     It covered authentication and authorization mechanisms.
  """
 
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import (
@@ -12,7 +12,7 @@ from flask_jwt_extended import (
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
-app.config['JWT_SECRET_KEY'] = 'Felix_is_not_a_cat'
+app.config['JWT_SECRET_KEY'] = 'My_dog_Griff_is_cute'
 jwt = JWTManager(app)
 
 users = {
@@ -31,7 +31,7 @@ users = {
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if user in users and check_password_hash(user['password'], password):
+    if user is not None and check_password_hash(user['password'], password):
         return user
     return None
 
