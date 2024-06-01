@@ -1,6 +1,6 @@
  # Python - Import & modules
 
-## Learning Objectives :scroll: :partying face:
+## Learning Objectives :scroll:
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 ## General
@@ -12,7 +12,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * How to prevent code in your script from being executed when imported
 * How to use command line arguments with your Python programs
 
-## Requirements
+## Requirements :ballot_box_with_check:
 ### General
 * Allowed editors: vi, vim, emacs
 * All your files will be interpreted/compiled on Ubuntu 22.04 LTS using python3 (version 3.10.*)
