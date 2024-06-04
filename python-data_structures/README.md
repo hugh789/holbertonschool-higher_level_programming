@@ -14,7 +14,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * When to use tuples versus lists
 * What is a sequence
 * What is sequence unpacking
-* What is the del statement and how to use it
+* What is the 'del' statement and how to use it
 
 ## Requirements :white_check_mark:
 ### Python Scripts
@@ -25,4 +25,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * A README.md file, at the root of the folder of the project, is mandatory
 * Your code should use the pycodestyle (version 2.7.*)
 * All your files must be executable
-* The length of your files will be tested using wc
+* The length of your files will be tested using 'wc'
