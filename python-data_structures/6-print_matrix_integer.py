@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def print_matrix_integer(matrix=[[]]):
     rows = len(matrix)
     cols = len(matrix[0])
@@ -11,3 +12,4 @@ def print_matrix_integer(matrix=[[]]):
             if j == cols - 1:
                 delim = '\n'
             print("{:d}".format(matrix[i][j]), end=delim)
+            

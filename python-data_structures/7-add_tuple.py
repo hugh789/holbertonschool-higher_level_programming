@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def add_tuple(tuple_a=(), tuple_b=()):
     arr = [0, 0]
     for i in range(2):
