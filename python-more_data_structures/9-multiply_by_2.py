@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def times_2(num):
     return num * 2
 
