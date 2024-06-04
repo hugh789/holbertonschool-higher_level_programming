@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defines a Rectangle class."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -19,3 +20,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """Returns a description of the rectangle."""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+    

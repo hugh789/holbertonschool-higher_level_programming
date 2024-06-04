@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Create a subclass
 """
@@ -24,3 +25,4 @@ class Square(Rectangle):
         [Rectangle] <width>/<height>
         """
         return ("[Square] " + str(self.__size) + "/" + str(self.__size))
+    

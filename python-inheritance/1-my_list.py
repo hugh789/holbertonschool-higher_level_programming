@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defines a MyList subclass."""
 
 
@@ -8,3 +9,4 @@ class MyList(list):
     def print_sorted(self):
         """Prints list sorted in ascending order."""
         print(sorted(self))
+        

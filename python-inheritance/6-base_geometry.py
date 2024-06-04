@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defines a BaseGeometry class."""
 
 
@@ -7,3 +8,4 @@ class BaseGeometry:
     def area(self):
         """Unimplemented area method."""
         raise Exception("area() is not implemented")
+    

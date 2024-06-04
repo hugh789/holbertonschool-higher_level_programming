@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defines a is_same_class() function."""
 
 
