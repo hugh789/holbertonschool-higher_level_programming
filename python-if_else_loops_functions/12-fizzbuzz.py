@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
+
 def fizzbuzz():
     for num in range(1, 101):
         if num % 15 == 0:
-            print("FizzBuzz ", end='')
+            print("FizzBuzz", end='')  # Remove extra space
         elif num % 3 == 0:
-            print("Fizz ", end='')
+            print("Fizz", end='')  # Remove extra space
         elif num % 5 == 0:
-            print("Buzz ", end='')
+            print("Buzz", end='')  # Remove extra space
         else:
-            print("{:d} ".format(num), end='')
-            
+            print(num, end=' ')  # Use f-string or direct formatting
+
