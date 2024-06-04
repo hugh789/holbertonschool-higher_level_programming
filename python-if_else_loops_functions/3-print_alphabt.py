@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-for char in range(ord('a'), ord('z') + 1):
-    if char not in ('q', 'e'):
-        print(chr(char), end='')
+for x in range(ord('a'), ord('z') + 1):
+    if x != ord('q') and x != ord('e'):
+        print("{:c}".format(x), end='')
