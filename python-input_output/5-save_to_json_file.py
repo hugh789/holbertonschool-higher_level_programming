@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-"""Module for function from_json_strint"""
+"""
+5-save_tp_json_file:
+    This module contains the save_to_json_file function.
+"""
 import json
 
 
-def from_json_string(my_str):
+def save_to_json_file(my_obj, filename):
     """
-    Convents a JSON string to a Python object
+    This function writes an object to a text file,
+    using a JSON representation.
 
-    Args:
-        my_str (str): the string to convert to JSON
-
-    Returns:
-        obj: a python object
+    Parameters:
+        - my_obj: The object to convert to JSON string.
+        - filename: The name of the file to open or create.
     """
-    return json.loads(my_str)
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(my_obj, f)
+
+    except PermissionError as e:
+        print(f"[PermissionError] {e}")
+
+    except TypeError as e:
+        print(f"[TypeError] {e}")
