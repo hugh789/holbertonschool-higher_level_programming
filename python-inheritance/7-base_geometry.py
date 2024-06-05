@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 """Defines a BaseGeometry class."""
 
 
@@ -24,4 +25,5 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
         
