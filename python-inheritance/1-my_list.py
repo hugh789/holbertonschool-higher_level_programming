@@ -1,8 +1,16 @@
 #!/usr/bin/python3
+"""
+1-my_list:
+    This module contains a class Mylist with the print_sorted function
+"""
+
 
 class MyList(list):
-    """A subclass of list with a print_sorted method."""
-
+    """
+    Inherits from the list class and contains the print_sorted method
+    """
     def print_sorted(self):
-        """Prints list sorted in ascending order."""
+        """
+        prints the sorted list (ascending)
+        """
         print(sorted(self))
