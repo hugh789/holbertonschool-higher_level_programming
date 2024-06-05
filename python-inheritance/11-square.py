@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 """
 11-square:
     and a subclass square that inhertis from Rectangle class.
 """
 Rectangle = __import__('9-rectangle').Rectangle
+
 
 
 class Square(Rectangle):
@@ -22,3 +24,4 @@ class Square(Rectangle):
 
     def __str__(self):
         return "[Square] " + str(self.__size) + "/" + str(self.__size)
+    
