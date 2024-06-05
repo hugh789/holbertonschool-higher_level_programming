@@ -20,4 +20,3 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """Returns a description of the rectangle."""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
-    
