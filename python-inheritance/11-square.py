@@ -2,16 +2,17 @@
 
 """
 11-square:
-    and a subclass square that inhertis from Rectangle class.
+  and a subclass square that inherits from Rectangle class.
 """
-Rectangle = __import__('9-rectangle').Rectangle
 
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
     """
     Subclass of Rectangle class
     """
+
     def __init__(self, size):
         Rectangle.integer_validator(self, "size", size)
         self.__size = size
@@ -20,8 +21,7 @@ class Square(Rectangle):
         """
         Returns area of rectangle
         """
-        return self.__size ** 2
+        return self.__size**2
 
     def __str__(self):
         return "[Square] " + str(self.__size) + "/" + str(self.__size)
-    
