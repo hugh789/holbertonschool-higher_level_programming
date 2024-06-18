@@ -1,3 +1,19 @@
--- display the number of records with id = 89 in the table first_table of the db hbtn_0c_0
+-- create a 2nd table second_table in the db hbtn_0c_0
+-- id INT, name VARCHAR(256), score INT
+-- if it already exists, the script should not fail
+-- not allowed to use SELECT AND SHOW
 
-SELECT COUNT(*) AS num_records FROM first_table WHERE id = 89;
+CREATE TABLE IF NOT EXISTS second_table (
+    id INT,
+    name VARCHAR(256),
+    score INT
+);
+
+-- Insert data into the table
+
+INSERT INTO second_table (id, name, score)
+VALUES
+(1, "John", 10),
+(2, "Alex", 3),
+(3, "Bob", 14),
+(4, "George", 8);
