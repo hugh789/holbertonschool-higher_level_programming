@@ -19,4 +19,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ## Requirements :white_check_mark:
 ### General
 * `MySQL 8.0` (version 8.0.25)
-* All ySQL keywords should be in updercase (`SELECT`, `WHERE`...)
+* All SQL keywords should be in updercase (`SELECT`, `WHERE`...)
