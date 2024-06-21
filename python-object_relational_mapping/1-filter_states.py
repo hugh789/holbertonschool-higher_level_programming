@@ -1,26 +1,26 @@
 #!/usr/bin/python3
 
-""" Nameless module for running SQL """
-
+"""
+Script that filters all states with a name starting with
+N from the database hbtn_0e_0_usa
+"""
 
 if __name__ == "__main__":
-    import MySQLdb
     import sys
+    import MySQLdb
 
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=sys.argv[1],
-        password=sys.argv[2],
-        database=sys.argv[3]
-    )
+    db = MySQLdb.connect(host='localhost',
+                         port=3306,
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3]
+                         )
 
-    c = db.cursor()
-    c.execute("""SELECT *
-              FROM states
-              WHERE name LIKE BINARY "N%"
-              ORDER BY id ASC""")
-    rows = c.fetchall()
+    cur = db.cursor()
+
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' \
+                AND BINARY name LIKE 'N%' ORDER BY id")
+    rows = cur.fetchall()
 
     for row in rows:
-        print("({0}, '{1}')".format(row[0], row[1]))
+        print(row)
