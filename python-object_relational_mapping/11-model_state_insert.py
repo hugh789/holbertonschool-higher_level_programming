@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Nameless module to suck data out from the database
 """
+Script that adds the State object "Louisana to the db
+"""
+
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -16,10 +18,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name='Louisiana')
-    session.add(new_state)
+    new = State(name="Louisiana")
+    session.add(new)
     session.commit()
 
-    session.refresh(new_state)
+    session.refresh(new)
 
-    print("{0}".format(new_state.id))
+    print("{}".format(new.id))

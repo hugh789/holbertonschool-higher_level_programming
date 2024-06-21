@@ -1,18 +1,18 @@
-
 #!/usr/bin/python3
-"""Nameless module to declare tables for db hbtn_0e_6_usa
+"""
+First class definition State.
 """
 
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 
 class State(Base):
-    """Class to declare the states database table
+    """
+    Class State that inherits from Base
     """
     __tablename__ = 'states'
-
-    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
