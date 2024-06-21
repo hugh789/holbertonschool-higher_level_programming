@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-
 """
 Script that takes in an argument and displays all values in the states table
-of hbtn_0e_0_usa where name matches the argument.
+of hbtn_0e_0_usa where name matches the argument - SQL injection safe
 """
 
 if __name__ == "__main__":
     import sys
     import MySQLdb
+
+    for av in sys.argv:
+        if av.count(";") > 0:
+            exit()
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
