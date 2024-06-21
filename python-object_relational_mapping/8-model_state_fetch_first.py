@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Nameless module to suck data out from the database
 """
 import sys
