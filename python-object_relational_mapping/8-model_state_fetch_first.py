@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
-"""Nameless module to suck data out from the database
+"""
+Write a script that prints the first State
+object from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -17,10 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State)
-
-    if query.count() == 0:
-        print("Nothing")
+    first_state = session.query(State).first()
+    if first_state:
+        print("{}: {}".format(first_state.id, first_state.name))
     else:
-        row = query.limit(1).one()
-        print("{0}: {1}".format(row.id, row.name))
+        print("Nothing")
