@@ -1,17 +1,30 @@
 #!/usr/bin/python3
-"""Nameless module to declare tables for db hbtn_0e_6_usa
+"""
+Write a script that prints the State
+object with the name passed as argument
 """
 
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
+import sys
+from model_state import Base, State
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import sessionmaker
 
-Base = declarative_base()
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        sys.argv[1],
+        sys.argv[2],
+        sys.argv[3]),
+        pool_pre_ping=True
+    )
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
+    state_name = sys.argv[4]
 
-class State(Base):
-    """Class to declare the states database table
-    """
-    __tablename__ = 'states'
+    query = session.query(State).where(State.name == state_name)
 
-    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
-    name = Column(String(128), nullable=False)
+    if query.count() == 0:
+        print("Not found")
+    else:
+        row = query.limit(1).one()
+        print("{0}".format(row.id))
